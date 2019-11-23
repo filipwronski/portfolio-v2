@@ -34,7 +34,8 @@ export default {
   */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module'
+    '@nuxtjs/eslint-module',
+    '@nuxt/typescript-build',
   ],
   /*
   ** Nuxt.js modules
@@ -42,8 +43,16 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    '@nuxtjs/style-resources',
+    '@nuxtjs/svg',
+    'nuxt-webfontloader',
   ],
+  styleResources: {
+    scss: [
+        'assets/scss/_variables.scss',
+    ]
+  },
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
@@ -59,5 +68,10 @@ export default {
     */
     extend (config, ctx) {
     }
-  }
+  },
+  webfontloader: {
+    google: {
+      families: ['Poppins:400,700,900']
+    }
+  },
 }

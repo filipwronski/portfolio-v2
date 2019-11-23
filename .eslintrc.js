@@ -5,7 +5,10 @@ module.exports = {
     node: true
   },
   parserOptions: {
-    parser: 'babel-eslint'
+    parser: 'babel-eslint',
+    ecmaFeatures: {
+      legacyDecorators: true
+    }
   },
   extends: [
     '@nuxtjs',
@@ -13,6 +16,13 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
+    "vue/html-self-closing": ["error", {
+      "html": {
+        "void": "always",
+        "normal": "never",
+        "component": "any"
+      }
+    }],
   }
 
 }
