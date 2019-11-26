@@ -37,8 +37,23 @@ html {
   letter-spacing: 1px;
 }
 .heading-2 {
-  font-size: 20px;
+  color: #7473fe;
+  font-size: 24px;
   letter-spacing: 1px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    background: #7473fe;
+    height: 1px;
+    bottom: 50px;
+  }
+}
+.heading-3 {
+  font-weight: 400;
 }
 .paragraph {
   display: block;
@@ -58,5 +73,9 @@ html {
   text-decoration: none;
   color: #7474ff;
   margin: 20px auto 0 auto;
+  &--dark {
+    color: #fff;
+    background: #7474ff;
+  }
 }
 </style>

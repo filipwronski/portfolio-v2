@@ -1,0 +1,59 @@
+<template>
+  <section class="contact">
+    <div class="container">
+      <h2 class="heading-2">
+        Contact
+      </h2>
+      <div class="contact__content">
+        <img
+          alt="People sending messages"
+          class="contact__image"
+          src="~/assets/img/contact.svg?data"
+        />
+        <h3 class="contact__title">
+          Do you have any quesion?
+        </h3>
+        <div class="contact__wrapper">
+          <a class="contact__button button button--dark" href="">Contact me by e-mail</a>
+          <a class="contact__button button button--dark" href="">Contact me by linkedin</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
+
+<script lang='ts'>
+import { Vue, Component } from 'vue-property-decorator'
+
+@Component
+export default class Contact extends Vue {}
+</script>
+
+<style scoped lang="scss">
+.contact {
+  background: #f1f1ff;
+  &__content {
+    display: grid;
+    grid-template-columns: 100%;
+    justify-content: center;
+    padding: 50px 0 100px 0;
+  }
+  &__image {
+    width: 300px;
+    justify-self: center;
+    margin-bottom: 50px;
+  }
+  &__title {
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+  &__wrapper {
+    justify-content: center;
+    display: flex;
+    .button {
+      margin: 20px;
+    }
+  }
+}
+</style>
