@@ -2,9 +2,9 @@
   <section class="hello">
     <div class="hello__block"></div>
     <img
+      v-lazy="'/img/web-developer.svg'"
       alt="Web developer"
       class="hello__image"
-      src="~/assets/img/web-developer.svg?data"
     />
     <div class="hello__text-wrapper">
       <div>
@@ -24,7 +24,9 @@
 <script lang='ts'>
 import { Vue, Component } from 'vue-property-decorator'
 
-@Component
+@Component({
+  serverCacheKey: () => 'hello',
+})
 export default class Hello extends Vue {}
 </script>
 
@@ -46,7 +48,7 @@ export default class Hello extends Vue {}
     min-height: 30vh;
     width: 30vw;
     margin-left: 12vw;
-    background: #7474ff;
+    background: #625fe5;
     display: inline-block;
     z-index: $z-index1;
     display: grid;

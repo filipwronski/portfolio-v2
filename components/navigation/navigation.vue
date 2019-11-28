@@ -30,7 +30,9 @@ interface NavigationLink {
   icon?: string;
 }
 
-@Component
+@Component({
+  serverCacheKey: () => 'navigation',
+})
 export default class Navigation extends Vue {
   @Prop({
     type: Array,
@@ -61,7 +63,7 @@ export default class Navigation extends Vue {
       &:after {
         content: '';
         height: 1px;
-        background: #7474ff;
+        background: #625fe5;
         width: 20px;
         position: relative;
         display: block;

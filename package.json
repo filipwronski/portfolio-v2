@@ -15,10 +15,13 @@
   "dependencies": {
     "@nuxt/typescript-runtime": "^0.2.4",
     "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/component-cache": "^1.1.5",
     "@nuxtjs/pwa": "^3.0.0-0",
     "@nuxtjs/svg": "^0.1.6",
     "nuxt": "^2.0.0",
     "nuxt-webfontloader": "^1.1.0",
+    "vue-lazy-hydration": "^1.0.0-beta.9",
+    "vue-lazyload": "^1.3.3",
     "vue-property-decorator": "^8.3.0"
   },
   "devDependencies": {

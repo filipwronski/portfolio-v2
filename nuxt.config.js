@@ -12,7 +12,16 @@ export default {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: "dns-prefetch",
+        href: "https://fonts.googleapis.com",
+      },
+      {
+        rel: "preconnect",
+        href: "https://fonts.googleapis.com",
+        crossorigin: true
+      }
     ]
   },
   /*
@@ -28,6 +37,7 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~/plugins/lazyload.js'
   ],
   /*
   ** Nuxt.js dev-modules
@@ -47,6 +57,10 @@ export default {
     '@nuxtjs/style-resources',
     '@nuxtjs/svg',
     'nuxt-webfontloader',
+    ['@nuxtjs/component-cache', {
+      max: 10000,
+      maxAge: 1000 * 60 * 60
+    }]
   ],
   styleResources: {
     scss: [
@@ -71,7 +85,7 @@ export default {
   },
   webfontloader: {
     google: {
-      families: ['Poppins:400,700,900']
+      families: ['Poppins:400&display=swap']
     }
   },
 }

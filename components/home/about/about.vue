@@ -16,9 +16,9 @@
           zdobywa doświadczenie oraz jako osoba która dzieli się doświadczeniem.
         </p>
         <img
+          v-lazy="'/img/undraw_master_plan_95wa.svg'"
           alt="Man thinking about master plan"
           class="about__image"
-          src="~/assets/img/undraw_master_plan_95wa.svg?data"
         />
       </div>
     </div>
@@ -28,8 +28,11 @@
 <script lang='ts'>
 import { Vue, Component } from 'vue-property-decorator'
 
-@Component
-export default class About extends Vue {}
+@Component({
+  serverCacheKey: () => 'about',
+})
+export default class About extends Vue {
+}
 </script>
 
 <style scoped lang="scss">

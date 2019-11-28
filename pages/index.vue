@@ -13,25 +13,17 @@
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator'
-import mainHeader from '~/components/header/header.vue'
-import hello from '~/components/home/hello/hello.vue'
-import about from '~/components/home/about/about.vue'
-import services from '~/components/home/services/services.vue'
-import experience from '~/components/home/experience/experience.vue'
-import skills from '~/components/home/skills/skills.vue'
-import contact from '~/components/home/contact/contact.vue'
-import mainFooter from '~/components/footer/footer.vue'
 
 @Component({
   components: {
-    mainHeader,
-    hello,
-    about,
-    services,
-    experience,
-    skills,
-    contact,
-    mainFooter
+    mainHeader: () => import('~/components/header/header.vue'),
+    hello: () => import('~/components/home/hello/hello.vue'),
+    about: () => import('~/components/home/about/about.vue'),
+    services: () => import('~/components/home/services/services.vue'),
+    experience: () => import('~/components/home/experience/experience.vue'),
+    skills: () => import('~/components/home/skills/skills.vue'),
+    contact: () => import('~/components/home/contact/contact.vue'),
+    mainFooter: () => import('~/components/footer/footer.vue')
   }
 })
 export default class Home extends Vue {

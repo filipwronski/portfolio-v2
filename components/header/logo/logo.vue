@@ -8,7 +8,9 @@
 </template>
 <script lang='ts'>
 import { Vue, Component } from 'vue-property-decorator'
-@Component
+@Component({
+  serverCacheKey: () => 'logo',
+})
 export default class Logo extends Vue {}
 </script>
 
@@ -28,7 +30,7 @@ export default class Logo extends Vue {}
     letter-spacing: 1px;
     text-transform: uppercase;
     &--accent {
-      color: #7474ff;
+      color: #625fe5;
     }
     &:after {
       position: absolute;
@@ -38,7 +40,7 @@ export default class Logo extends Vue {}
       height: 24px;
       content: '';
       background: transparent;
-      border: #7473fe solid 1px;
+      border: #625fe5 solid 1px;
       z-index: 0;
     }
   }

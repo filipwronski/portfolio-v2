@@ -37,7 +37,7 @@ html {
   letter-spacing: 1px;
 }
 .heading-2 {
-  color: #7473fe;
+  color: #625fe5;
   font-size: 24px;
   letter-spacing: 1px;
   padding-top: 50px;
@@ -47,7 +47,7 @@ html {
     content: '';
     position: absolute;
     width: 50px;
-    background: #7473fe;
+    background: #625fe5;
     height: 1px;
     bottom: 50px;
   }
@@ -71,11 +71,11 @@ html {
   font-weight: 600;
   text-transform: uppercase;
   text-decoration: none;
-  color: #7474ff;
+  color: #625fe5;
   margin: 20px auto 0 auto;
   &--dark {
     color: #fff;
-    background: #7474ff;
+    background: #625fe5;
   }
 }
 </style>

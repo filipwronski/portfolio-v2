@@ -15,8 +15,10 @@
 <script lang='ts'>
 import { Vue, Component } from 'vue-property-decorator'
 
-@Component
-export default class About extends Vue {}
+@Component({
+  serverCacheKey: () => 'footer',
+})
+export default class Footer extends Vue {}
 </script>
 
 <style scoped lang="scss">
@@ -30,7 +32,7 @@ export default class About extends Vue {}
   &__text {
     font-size: 12px;
     a {
-      color: #7473fe;
+      color: #625fe5;
     }
   }
 }

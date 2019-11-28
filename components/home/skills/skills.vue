@@ -42,7 +42,9 @@
 <script lang='ts'>
 import { Vue, Component } from 'vue-property-decorator'
 
-@Component
+@Component({
+  serverCacheKey: () => 'skills',
+})
 export default class Skills extends Vue {}
 </script>
 
@@ -61,7 +63,7 @@ export default class Skills extends Vue {}
     padding: 0;
     li {
       padding: 2px 5px;
-      background: #7473fe;
+      background: #625fe5;
       display: inline-block;
       margin-right: 10px;
       color: #fff;

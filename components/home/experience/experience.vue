@@ -51,7 +51,9 @@
 <script lang='ts'>
 import { Vue, Component } from 'vue-property-decorator'
 
-@Component
+@Component({
+  serverCacheKey: () => 'experience',
+})
 export default class Experience extends Vue {}
 </script>
 
@@ -72,7 +74,7 @@ export default class Experience extends Vue {}
       display: block;
     }
     &__company {
-      color: #7473fe;
+      color: #625fe5;
     }
     &__timeline {
       width: 100%;
@@ -100,8 +102,8 @@ export default class Experience extends Vue {}
       border: 1px solid #000;
       background: #fff;
       &--active {
-        background: #7473fe;
-        border-color: #7473fe;
+        background: #625fe5;
+        border-color: #625fe5;
       }
       &--done {
         position: relative;

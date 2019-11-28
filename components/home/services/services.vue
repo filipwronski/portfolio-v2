@@ -12,9 +12,9 @@
             </h3>
           </header>
           <img
+            v-lazy="'/img/web-development.svg'"
             alt="Web development"
             class="services-list__image"
-            src="~/assets/img/web-development.svg?data"
           />
         </article>
         <article class="services-list__item">
@@ -24,9 +24,9 @@
             </h3>
           </header>
           <img
+            v-lazy="'/img/mobile-app.svg'"
             alt="Mobile app development"
             class="services-list__image"
-            src="~/assets/img/mobile-app.svg?data"
           />
         </article>
         <article class="services-list__item">
@@ -36,9 +36,9 @@
             </h3>
           </header>
           <img
+            v-lazy="'/img/progressive-app.svg'"
             alt="Progressive app development"
             class="services-list__image"
-            src="~/assets/img/progressive-app.svg?data"
           />
         </article>
         <article class="services-list__item">
@@ -48,9 +48,9 @@
             </h3>
           </header>
           <img
+            v-lazy="'/img/seo-audits.svg'"
             alt="Seo Audits"
             class="services-list__image"
-            src="~/assets/img/seo-audits.svg?data"
           />
         </article>
         <article class="services-list__item">
@@ -60,9 +60,9 @@
             </h3>
           </header>
           <img
+            v-lazy="'/img/ux-audits.svg'"
             alt="Ux audits"
             class="services-list__image"
-            src="~/assets/img/ux-audits.svg?data"
           />
         </article>
         <article class="services-list__item">
@@ -72,9 +72,9 @@
             </h3>
           </header>
           <img
+            v-lazy="'/img/consulting.svg'"
             alt="Consulting"
             class="services-list__image"
-            src="~/assets/img/consulting.svg?data"
           />
         </article>
       </div>
@@ -85,7 +85,9 @@
 <script lang='ts'>
 import { Vue, Component } from 'vue-property-decorator'
 
-@Component
+@Component({
+  serverCacheKey: () => 'services',
+})
 export default class Services extends Vue {}
 </script>
 

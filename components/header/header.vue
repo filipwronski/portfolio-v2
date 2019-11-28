@@ -16,6 +16,7 @@ import navigation from '~/components/navigation/navigation.vue'
 import logo from '~/components/header/logo/logo.vue'
 
 @Component({
+  serverCacheKey: () => 'header',
   components: {
     navigation,
     logo
@@ -29,15 +30,15 @@ export default class MainHeader extends Vue {
     },
     {
       title: 'About',
-      url: '/'
+      url: '/about'
     },
     {
       title: 'Skills',
-      url: '/'
+      url: '/skills'
     },
     {
       title: 'Contact',
-      url: '/'
+      url: '/contact'
     }
   ]
 

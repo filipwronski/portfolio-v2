@@ -6,9 +6,9 @@
       </h2>
       <div class="contact__content">
         <img
+          v-lazy="'/img/contact.svg'"
           alt="People sending messages"
           class="contact__image"
-          src="~/assets/img/contact.svg?data"
         />
         <h3 class="contact__title">
           Do you have any quesion?
@@ -25,7 +25,9 @@
 <script lang='ts'>
 import { Vue, Component } from 'vue-property-decorator'
 
-@Component
+@Component({
+  serverCacheKey: () => 'contact',
+})
 export default class Contact extends Vue {}
 </script>
 
