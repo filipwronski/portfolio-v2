@@ -16,7 +16,7 @@
 import { Vue, Component } from 'vue-property-decorator'
 
 @Component({
-  serverCacheKey: () => 'footer',
+  serverCacheKey: () => 'footer'
 })
 export default class Footer extends Vue {}
 </script>

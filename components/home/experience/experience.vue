@@ -1,5 +1,5 @@
 <template>
-  <section class="experience">
+  <section id="experience" class="experience">
     <div class="container">
       <h2 class="heading-2">
         Experience
@@ -10,14 +10,14 @@
           <figure class="position__timeline">
             <figure class="position__timeline-point position__timeline-point--done"></figure>
           </figure>
-          <span class="position__title">Technikum Informatyczne</span>
+          <span class="position__title">IT Technical College</span>
         </div>
         <div class="position">
           <span class="position__date">2011-2014</span>
           <figure class="position__timeline">
             <figure class="position__timeline-point position__timeline-point--done"></figure>
           </figure>
-          <span class="position__title">Studia - Informatyka</span>
+          <span class="position__title">Bachelor of Computer Science</span>
         </div>
         <div class="position">
           <span class="position__date">2014-2016</span>
@@ -52,7 +52,7 @@
 import { Vue, Component } from 'vue-property-decorator'
 
 @Component({
-  serverCacheKey: () => 'experience',
+  serverCacheKey: () => 'experience'
 })
 export default class Experience extends Vue {}
 </script>
@@ -129,6 +129,22 @@ export default class Experience extends Vue {}
           bottom: 3px;
           left: 14px;
         }
+      }
+    }
+  }
+}
+@media (max-width: 575.98px) {
+  .experience {
+    .timeline {
+      grid-template-columns: 1fr;
+    }
+    .position {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      &__timeline {
+        background: transparent;
+        order: 3;
       }
     }
   }

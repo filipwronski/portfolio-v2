@@ -1,15 +1,20 @@
 <template>
   <div class="logo">
-    <span class="logo__text">
+    <a
+      v-scroll-to="{el: '#home'}"
+      class="logo__text"
+      href="#"
+      @click="$emit('toggleMenu')"
+    >
       <span class="logo__text--accent">F</span>ilip
       <span class="logo__text--accent">W</span>roński
-    </span>
+    </a>
   </div>
 </template>
 <script lang='ts'>
 import { Vue, Component } from 'vue-property-decorator'
 @Component({
-  serverCacheKey: () => 'logo',
+  serverCacheKey: () => 'logo'
 })
 export default class Logo extends Vue {}
 </script>
@@ -23,12 +28,14 @@ export default class Logo extends Vue {}
     font-size: 16px;
     font-weight: 600;
     line-height: 16px;
+    text-decoration: none;
     top: 4px;
     margin-left: 4px;
     line-height: 35px;
     background: #f1f1ff;
     letter-spacing: 1px;
     text-transform: uppercase;
+    color: #000;
     &--accent {
       color: #625fe5;
     }

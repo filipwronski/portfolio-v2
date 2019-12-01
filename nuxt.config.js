@@ -14,12 +14,12 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
-        rel: "dns-prefetch",
-        href: "https://fonts.googleapis.com",
+        rel: 'dns-prefetch',
+        href: 'https://fonts.googleapis.com'
       },
       {
-        rel: "preconnect",
-        href: "https://fonts.googleapis.com",
+        rel: 'preconnect',
+        href: 'https://fonts.googleapis.com',
         crossorigin: true
       }
     ]
@@ -45,7 +45,7 @@ export default {
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
-    '@nuxt/typescript-build',
+    '@nuxt/typescript-build'
   ],
   /*
   ** Nuxt.js modules
@@ -60,11 +60,14 @@ export default {
     ['@nuxtjs/component-cache', {
       max: 10000,
       maxAge: 1000 * 60 * 60
+    }],
+    ['vue-scrollto/nuxt', {
+      duration: 300
     }]
   ],
   styleResources: {
     scss: [
-        'assets/scss/_variables.scss',
+      'assets/scss/_variables.scss'
     ]
   },
   /*
@@ -87,5 +90,5 @@ export default {
     google: {
       families: ['Poppins:400&display=swap']
     }
-  },
+  }
 }

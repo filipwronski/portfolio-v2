@@ -65,7 +65,7 @@ html {
   font-weight: 400;
   letter-spacing: 1px;
   display: inline-block;
-  padding: 10px;
+  padding: 10px 20px;
   background: #fff;
   font-size: 16px;
   font-weight: 600;
@@ -76,6 +76,11 @@ html {
   &--dark {
     color: #fff;
     background: #625fe5;
+  }
+}
+@media (max-width: 575.98px) {
+  .heading-2 {
+    text-align: center;
   }
 }
 </style>

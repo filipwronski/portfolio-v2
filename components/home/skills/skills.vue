@@ -1,5 +1,5 @@
 <template>
-  <section class="skills">
+  <section id="skills" class="skills">
     <div class="container">
       <h2 class="heading-2">
         Skills
@@ -43,7 +43,7 @@
 import { Vue, Component } from 'vue-property-decorator'
 
 @Component({
-  serverCacheKey: () => 'skills',
+  serverCacheKey: () => 'skills'
 })
 export default class Skills extends Vue {}
 </script>
@@ -52,8 +52,7 @@ export default class Skills extends Vue {}
 .skills {
   background: #f1f1ff;
   margin-top: 50px;
-  padding-bottom: 30px;
-  margin-bottom: 50px;
+  padding-bottom: 50px;
   &__title {
     margin-bottom: 10px;
   }
@@ -66,6 +65,7 @@ export default class Skills extends Vue {}
       background: #625fe5;
       display: inline-block;
       margin-right: 10px;
+      margin-bottom: 10px;
       color: #fff;
     }
   }

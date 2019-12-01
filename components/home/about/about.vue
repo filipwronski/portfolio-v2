@@ -1,5 +1,5 @@
 <template>
-  <section id="#about" class="about">
+  <section id="about" class="about">
     <div class="container">
       <h2 class="heading-2">
         About me
@@ -7,14 +7,19 @@
     </div>
     <div class="container">
       <div class="about__content">
-        <p class="about__text">
-          Pracuję jako Full-stack developer od 2014 roku, łączę technologie backendowe i
-          frontendowe ponieważ cenię sobie samodzielność i niezależność w czasie
-          realizacji
-          projektu. Nie zmienia to faktu, że lubię pracować w zespole zarówno jako osoba,
-          która
-          zdobywa doświadczenie oraz jako osoba która dzieli się doświadczeniem.
-        </p>
+        <div>
+          <p class="about__text">
+            I have been working as a Full-stack developer since 2014,
+            I'm mix both front-end and back-end technologies
+            because I like to take part of all of development process.
+          </p><br />
+          <p class="about__text">
+            Curently I'm focus on Vue.js ecosystem, web apps performance and good apps architecture.
+          </p><br />
+          <p class="about__text">
+            I'm typical teamplayer, so I really like to work and spend time around people with common goal and passion. You can hang me out often on Warsaw JavaScripts meetups like WarsawJS, Dev.js, Vue.js Poland and Facebook Developers Circle.
+          </p><br />
+        </div>
         <img
           v-lazy="'/img/undraw_master_plan_95wa.svg'"
           alt="Man thinking about master plan"
@@ -29,7 +34,7 @@
 import { Vue, Component } from 'vue-property-decorator'
 
 @Component({
-  serverCacheKey: () => 'about',
+  serverCacheKey: () => 'about'
 })
 export default class About extends Vue {
 }
@@ -37,7 +42,7 @@ export default class About extends Vue {
 
 <style scoped lang="scss">
 .about {
-  margin-bottom: 50px;
+  padding-bottom: 50px;
   background: #f1f1ff;
   &__content {
     background:#f1f1ff;
@@ -45,7 +50,6 @@ export default class About extends Vue {
     grid-template-columns: 40% 60%;
   }
   &__text {
-    width: 400px;
     text-align: justify;
     font-size: 14px;
     line-height: 24px;
@@ -56,6 +60,13 @@ export default class About extends Vue {
     align-self: center;
     width: 100%;
     padding: 0 20%;
+  }
+}
+@media (max-width: 575.98px) {
+  .about {
+    &__content {
+      grid-template-columns: 100%;
+    }
   }
 }
 </style>

@@ -3,21 +3,16 @@
     <nav class="navigation__main">
       <ul>
         <li v-for="navLink in navList" :key="navLink.url">
-          <nuxt-link :to="navLink.url" :title="navLink.title">
+          <a
+            v-scroll-to="{el: navLink.url}"
+            href="#"
+            :title="navLink.title"
+          >
             {{ navLink.title }}
-          </nuxt-link>
+          </a>
         </li>
       </ul>
     </nav>
-    <!-- <nav class="navigation__social-media">
-      <ul>
-        <li v-for="navLink in socialNavList" :key="navLink.url">
-          <nuxt-link :to="navLink.url" :title="navLink.title">
-            <img :src="navLink.icon" />
-          </nuxt-link>
-        </li>
-      </ul>
-    </nav> -->
   </div>
 </template>
 
@@ -31,18 +26,13 @@ interface NavigationLink {
 }
 
 @Component({
-  serverCacheKey: () => 'navigation',
+  serverCacheKey: () => 'navigation'
 })
 export default class Navigation extends Vue {
   @Prop({
     type: Array,
     required: true
   }) navList: NavigationLink[];
-
-  @Prop({
-    type: Array,
-    required: true
-  }) socialNavList: NavigationLink[];
 }
 </script>
 
@@ -50,7 +40,7 @@ export default class Navigation extends Vue {
 .navigation {
   display: inline-block;
   justify-self: flex-end;
-  z-index: $z-index1;
+  z-index: $z-index100;
   &__main {
     ul {
       list-style: none;
@@ -79,6 +69,12 @@ export default class Navigation extends Vue {
       letter-spacing: 1px;
       font-size: 14px;
     }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .navigation {
+    display: none;
   }
 }
 </style>

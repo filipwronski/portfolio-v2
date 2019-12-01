@@ -1,5 +1,5 @@
 <template>
-  <section class="services">
+  <section id="#services" class="services">
     <div class="container">
       <h2 class="heading-2">
         Services
@@ -86,7 +86,7 @@
 import { Vue, Component } from 'vue-property-decorator'
 
 @Component({
-  serverCacheKey: () => 'services',
+  serverCacheKey: () => 'services'
 })
 export default class Services extends Vue {}
 </script>
@@ -115,6 +115,21 @@ export default class Services extends Vue {}
       &__title {
         text-align: center;
         margin-bottom: 20px;
+      }
+    }
+  }
+
+  @media (max-width: 575.98px) {
+    .services {
+      .services-list {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  }
+  @media (max-width: 430px) {
+    .services {
+      .services-list {
+        grid-template-columns: 1fr;
       }
     }
   }

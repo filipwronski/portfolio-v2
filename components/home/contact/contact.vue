@@ -1,5 +1,5 @@
 <template>
-  <section class="contact">
+  <section id="contact" class="contact">
     <div class="container">
       <h2 class="heading-2">
         Contact
@@ -26,7 +26,7 @@
 import { Vue, Component } from 'vue-property-decorator'
 
 @Component({
-  serverCacheKey: () => 'contact',
+  serverCacheKey: () => 'contact'
 })
 export default class Contact extends Vue {}
 </script>
@@ -55,6 +55,17 @@ export default class Contact extends Vue {}
     display: flex;
     .button {
       margin: 20px;
+    }
+  }
+}
+@media (max-width: 575.98px) {
+  .contact {
+    &__wrapper {
+      flex-direction: column;
+      .button {
+        margin: 10px auto;
+        display: block;
+      }
     }
   }
 }
