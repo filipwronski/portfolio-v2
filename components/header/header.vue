@@ -87,7 +87,7 @@ export default class MainHeader extends Vue {
   transition: all .4s;
   &__wrapper {
     display: grid;
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 28% 72%;
     align-items: center;
   }
   &--fixed {

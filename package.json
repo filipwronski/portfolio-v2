@@ -1,8 +1,8 @@
 {
-  "name": "portfolio",
+  "name": "Filip Wroński - JavaScript Developer",
   "version": "1.0.0",
-  "description": "My kryptonian Nuxt.js project",
-  "author": "filip",
+  "description": "I work as a JavaScript Developer. I build web applications using technologies such as Vue.js, PWA and TypeScript.",
+  "author": "Filip Wroński",
   "private": true,
   "scripts": {
     "dev": "nuxt-ts",

@@ -14,8 +14,20 @@
           Do you have any quesion?
         </h3>
         <div class="contact__wrapper">
-          <a class="contact__button button button--dark" href="">Contact me by e-mail</a>
-          <a class="contact__button button button--dark" href="">Contact me by linkedin</a>
+          <a
+            class="contact__button button button--dark"
+            href="mailto:filip0822@gmail.com"
+            title="Contact by mail"
+          >
+            Contact me by e-mail
+          </a>
+          <a
+            class="contact__button button button--dark"
+            title="Linkedin Contact"
+            href="https://www.linkedin.com/in/filipw0822/"
+          >
+            Contact me by linkedin
+          </a>
         </div>
       </div>
     </div>

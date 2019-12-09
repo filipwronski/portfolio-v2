@@ -103,7 +103,9 @@ export default class Services extends Vue {}
         justify-self: center;
         background: #f1f1ff;
         height: 100%;
+        width: 100%;
         padding: 20px;
+        min-height: 200px;
       }
       &__image {
         max-width: 50%;

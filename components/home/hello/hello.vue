@@ -36,6 +36,7 @@ export default class Hello extends Vue {}
   min-height: calc(100vh - 55px);
   display: grid;
   position: relative;
+  margin-top: 55px;
   &__block {
     position: absolute;
     height: 100%;
@@ -69,18 +70,24 @@ export default class Hello extends Vue {}
     height: auto;
     width: 20vw;
     position: absolute;
-    bottom: 100px;
-    left: 100px;
+    bottom: 5vh;
+    left: 5vh;
   }
+}
+@media (max-width: 640px) {
+ .hello {
+    &__image {
+      display: none;
+    }
+    &__text-wrapper {
+      margin-left: 0
+    }
+ }
 }
 @media (max-width: 575.98px) {
   .hello {
-    &__image {
-      width: 35vw;
-    }
     &__text-wrapper {
       min-height: 30vh;
-      margin-left: 0;
     }
   }
 }
@@ -88,9 +95,6 @@ export default class Hello extends Vue {}
   .hello {
     &__text-wrapper {
       margin: 10px;
-    }
-    &__image {
-      bottom: 10px;
     }
   }
 }

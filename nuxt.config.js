@@ -15,12 +15,19 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
         rel: 'dns-prefetch',
+        async: true,
         href: 'https://fonts.googleapis.com'
       },
       {
         rel: 'preconnect',
+        async: true,
         href: 'https://fonts.googleapis.com',
         crossorigin: true
+      },
+      {
+        rel: 'stylesheet',
+        defer: true,
+        href: 'https://fonts.googleapis.com/css?family=Poppins:400&display=swap&text=aąbcćdeęfghijklłmnńoóprsśtuwyzźżAĄBCĆDEĘFGHIJKLŁMNŃOÓPRSŚTUWYZŹŻ',
       }
     ]
   },
@@ -56,7 +63,7 @@ export default {
     '@nuxtjs/pwa',
     '@nuxtjs/style-resources',
     '@nuxtjs/svg',
-    'nuxt-webfontloader',
+    // 'nuxt-webfontloader',
     ['@nuxtjs/component-cache', {
       max: 10000,
       maxAge: 1000 * 60 * 60
@@ -86,9 +93,9 @@ export default {
     extend (config, ctx) {
     }
   },
-  webfontloader: {
-    google: {
-      families: ['Poppins:400&display=swap']
-    }
-  }
+  // webfontloader: {
+  //   google: {
+  //     families: ['Poppins:400&display=swap']
+  //   }
+  // }
 }
