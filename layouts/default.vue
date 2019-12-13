@@ -8,8 +8,15 @@
 export default {}
 </script>
 <style lang="scss">
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/font/poppins.ttf') format('ttff'),
+}
+
 html {
-  font-family: $font-poppins;
+  font-family: 'Poppins';
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;

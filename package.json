@@ -1,5 +1,5 @@
 {
-  "name": "Filip Wroński - JavaScript Developer",
+  "name": "Portfolio",
   "version": "1.0.0",
   "description": "I work as a JavaScript Developer. I build web applications using technologies such as Vue.js, PWA and TypeScript.",
   "author": "Filip Wroński",
@@ -17,6 +17,7 @@
     "@nuxt/typescript-runtime": "^0.2.4",
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/component-cache": "^1.1.5",
+    "@nuxtjs/google-tag-manager": "^2.3.1",
     "@nuxtjs/pwa": "^3.0.0-0",
     "@nuxtjs/svg": "^0.1.6",
     "nuxt": "^2.0.0",

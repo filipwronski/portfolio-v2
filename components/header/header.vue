@@ -4,7 +4,7 @@
     class="main-header"
   >
     <div class="main-header__wrapper container">
-      <logo @toggleMenu="toggleMenu" />
+      <logo @toggleMenu="isMobileMenuOpen = false" />
       <navigation
         :nav-list="navList"
       />

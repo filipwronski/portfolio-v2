@@ -5,30 +5,39 @@ export default {
   ** Headers of the page
   */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'Filip Wroński - JavaScript Developer',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+      { hid: 'description', name: 'description', content: 'I live in Warsaw and work with Vue.js, PWA, Websites, Web Apps' },
+      {
+        hid: `keywords`,
+        name: 'keywords',
+        keywords: 'Vue.js, JavaScript, Filip Wroński, PWA, Web Apps'
+      },
+      {
+        hid: `og:title`,
+        property: 'og:title',
+        content: `Filip Wroński - JavaScript Developer`
+      },
+      {
+        hid: `og:url`,
+        property: 'og:url',
+        content: 'vue-js.pl'
+      },
+      {
+        hid: `og:image`,
+        property: 'og:image',
+        content: '/ogimage.jpg'
+      },
+      {
+        hid: `og:description`,
+        property: 'og:description',
+        content: 'Vue.js, JavaScript, Filip Wroński, PWA, Web Apps'
+      }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      {
-        rel: 'dns-prefetch',
-        async: true,
-        href: 'https://fonts.googleapis.com'
-      },
-      {
-        rel: 'preconnect',
-        async: true,
-        href: 'https://fonts.googleapis.com',
-        crossorigin: true
-      },
-      {
-        rel: 'stylesheet',
-        defer: true,
-        href: 'https://fonts.googleapis.com/css?family=Poppins:400&display=swap&text=aąbcćdeęfghijklłmnńoóprsśtuwyzźżAĄBCĆDEĘFGHIJKLŁMNŃOÓPRSŚTUWYZŹŻ',
-      }
     ]
   },
   /*
@@ -70,7 +79,10 @@ export default {
     }],
     ['vue-scrollto/nuxt', {
       duration: 300
-    }]
+    }],
+    ['@nuxtjs/google-tag-manager', {
+      id: 'GTM-N56WMW4'
+    }],
   ],
   styleResources: {
     scss: [

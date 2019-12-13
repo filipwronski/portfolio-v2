@@ -3,13 +3,13 @@
     <nav class="navigation__main">
       <ul>
         <li v-for="navLink in navList" :key="navLink.url">
-          <a
+          <router-link
             v-scroll-to="{el: navLink.url}"
-            href="#"
+            :to="{path: '/'}"
             :title="navLink.title"
           >
             {{ navLink.title }}
-          </a>
+          </router-link>
         </li>
       </ul>
     </nav>
